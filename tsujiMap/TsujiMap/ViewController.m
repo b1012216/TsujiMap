@@ -47,7 +47,22 @@
     region.span.latitudeDelta = 0.08;
     region.span.longitudeDelta = 0.08;
     [tsujiMapView setRegion:region animated:NO];
-
+    
+    // テキストの編集を不可にする
+    self.tsujitext.editable = NO;
+    
+    // テキストを左寄せにする
+    self.tsujitext.textAlignment = NSTextAlignmentLeft;
+    
+    // テキストのフォントを設定
+    self.tsujitext.font = [UIFont fontWithName:@"Helvetica" size:14];
+    
+    // テキストの背景色を設定
+    self.tsujitext.backgroundColor = [UIColor whiteColor];
+    
+    self.tsujitext.text = @"";
+   
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -106,9 +121,17 @@
     tsujiPin.coordinate = coordinate;
     NSLog(@"%f", tsujiPin.coordinate.latitude);
     NSLog(@"%f", tsujiPin.coordinate.longitude);
-    
     [tsujiMapView addAnnotation:tsujiPin];
     [self.tsujiArray addObject:tsujiPin];
+    
+    self.tsujitext.text =
+    [self.tsujitext.text stringByAppendingFormat:@"緯度%f\n", tsujiPin.coordinate.latitude];
+    
+    
+    self.tsujitext.text =
+    [self.tsujitext.text stringByAppendingFormat:@"経度%f\n", tsujiPin.coordinate.longitude];
+
+
     
 }
 
@@ -118,11 +141,8 @@
     for(int i = 0; i < [self.tsujiArray count]; i++){
         route_points[i] = CLLocationCoordinate2DMake(((MyLocationPin *)[self.tsujiArray objectAtIndex:i]).coordinate.latitude
                                                      ,((MyLocationPin *)[self.tsujiArray objectAtIndex:i]).coordinate.longitude);
-        
+    
     }
-    NSLog(@"%f",((MyLocationPin *)[self.tsujiArray objectAtIndex:2]).coordinate.latitude);
-    NSLog(@"%f", route_points[2].latitude);
-    NSLog(@"%d", [self.tsujiArray count]);
     
     MKPolyline *tsujiLine;
     tsujiLine = [[MKPolyline alloc] init];
@@ -132,4 +152,14 @@
     
 }
 
+- (IBAction)tsujiReset:(id)sender {
+    [self.tsujiMapView removeAnnotations:self.tsujiMapView.annotations];
+     self.tsujiArray = [NSMutableArray array];
+    self.tsujitext.text = @"";
+    for(id<MKOverlay> overlay in [tsujiMapView overlays]) {
+        [tsujiMapView removeOverlay:overlay];
+    }
+    
+
+}
 @end

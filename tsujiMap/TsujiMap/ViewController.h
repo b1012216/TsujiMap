@@ -18,6 +18,9 @@
 @property MyLocationPin *tsujiPin;
 - (IBAction)tsujiButton:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UITextView *tsujitext;
+
+- (IBAction)tsujiReset:(id)sender;
 
 @end
 

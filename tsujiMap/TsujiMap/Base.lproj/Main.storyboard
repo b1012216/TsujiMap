@@ -35,40 +35,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6S-J1-5vv">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdJ-mP-Rwf">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oV4-A2-Gk4">
+                                <rect key="frame" x="-52" y="72" width="652" height="566"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L6S-J1-5vv">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="戻る" id="KNh-xd-p8Q"/>
+                                    <barButtonItem title="リセット" id="KNh-xd-p8Q">
+                                        <connections>
+                                            <action selector="tsujiReset:" destination="BYZ-38-t0r" id="cB7-zF-OZj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Oqk-W7-xZ3"/>
                                     <barButtonItem title="ピンに線を引く" id="kn3-N7-MOD">
                                         <connections>
                                             <action selector="tsujiButton:" destination="BYZ-38-t0r" id="w9C-TE-bMM"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ngK-it-TiD"/>
                                 </items>
                             </toolbar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oV4-A2-Gk4">
-                                <rect key="frame" x="0.0" y="44" width="600" height="566"/>
-                            </mapView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-bA-IbD">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iXS-TN-AxR">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wit-aB-7w2">
+                                <rect key="frame" x="460" y="72" width="140" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="237-fc-Dzf"/>
+                                    <constraint firstAttribute="height" constant="528" id="bKV-Q9-N40"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wit-aB-7w2" secondAttribute="trailing" constant="-16" id="3bU-qc-arb"/>
                             <constraint firstItem="L6S-J1-5vv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="67U-s7-2g8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="L6S-J1-5vv" secondAttribute="trailing" constant="-16" id="Go6-4w-M01"/>
-                            <constraint firstItem="oV4-A2-Gk4" firstAttribute="top" secondItem="L6S-J1-5vv" secondAttribute="bottom" id="IO8-sB-R4C"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oV4-A2-Gk4" secondAttribute="bottom" id="JQI-Cy-Yyz"/>
-                            <constraint firstItem="oV4-A2-Gk4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Y8w-v6-NYL"/>
-                            <constraint firstItem="L6S-J1-5vv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="e33-eS-FF8"/>
-                            <constraint firstItem="oV4-A2-Gk4" firstAttribute="top" secondItem="L6S-J1-5vv" secondAttribute="bottom" id="hNa-OZ-sx0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oV4-A2-Gk4" secondAttribute="trailing" constant="-16" id="m9b-Ip-3tQ"/>
+                            <constraint firstItem="L6S-J1-5vv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="87c-55-Bid"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="oV4-A2-Gk4" secondAttribute="bottom" constant="-38" id="Bwg-6Q-qmE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oV4-A2-Gk4" secondAttribute="trailing" constant="-20" id="FrQ-0Y-OsA"/>
+                            <constraint firstItem="oV4-A2-Gk4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-19" id="HPE-Ge-erv"/>
+                            <constraint firstItem="wit-aB-7w2" firstAttribute="top" secondItem="L6S-J1-5vv" secondAttribute="bottom" id="Ubi-qa-8wx"/>
+                            <constraint firstItem="oV4-A2-Gk4" firstAttribute="top" secondItem="L6S-J1-5vv" secondAttribute="bottom" id="Yv4-MD-tck"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L6S-J1-5vv" secondAttribute="trailing" constant="-16" id="n7V-I8-uMd"/>
+                            <constraint firstItem="L6S-J1-5vv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="z1j-py-tN3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tsujiMapView" destination="oV4-A2-Gk4" id="9jj-oa-wbw"/>
+                        <outlet property="tsujitext" destination="wit-aB-7w2" id="k2x-tD-sTa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301" y="219"/>
+            <point key="canvasLocation" x="295" y="261"/>
         </scene>
     </scenes>
 </document>
